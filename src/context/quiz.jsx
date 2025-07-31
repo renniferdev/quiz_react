@@ -24,11 +24,15 @@ const quizReducer = (state, action) => {
       };
 
     case "START_GAME":
-      let quizQuestions = null;
+      let quizQuestions = [];
 
-      state.questions.forEach((question) => {
+      questions.forEach((question) => {
         if (question.category === action.payload) {
-          quizQuestions = question.questions;
+          quizQuestions = question.questions.map((q) => {
+            const shuffledOptions = [...q.options]
+            .sort(() => Math.random() - 0.5);
+            return { ...q, options: shuffledOptions };
+          });
         }
       });
 
@@ -66,8 +70,6 @@ const quizReducer = (state, action) => {
     }
 
     case "NEW_GAME": {
-      console.log(questions);
-      console.log(initialState);
       return initialState;
     }
 
@@ -97,19 +99,17 @@ const quizReducer = (state, action) => {
     case "REMOVE_OPTION": {
       const questionWithoutOption = state.questions[state.currentQuestion];
 
-      console.log(state.currentQuestion);
-
-      console.log(questionWithoutOption);
-
       let repeat = true;
-      let optionToHide;
+      let optionToHide = null;
 
-      questionWithoutOption.options.forEach((option) => {
-        if (option !== questionWithoutOption.answer && repeat) {
-          optionToHide = option;
-          repeat = false;
-        }
-      });
+      // Garante que a opção a ser removida não seja a resposta correta
+      const optionsToHide = questionWithoutOption.options.filter(
+        (opt) => opt !== questionWithoutOption.answer
+      );
+
+      if (optionsToHide.length > 0) {
+        optionToHide = optionsToHide[Math.floor(Math.random() * optionsToHide.length)];
+      }
 
       return {
         ...state,

@@ -4,8 +4,10 @@ import { QuizContext } from "../context/quiz";
 
 import "./Option.css";
 
-const Option = ({ option, selectOption, answer, hide }) => {
+const Option = ({ option, selectOption, answer, hide, index }) => {
   const [quizState, dispatch] = useContext(QuizContext);
+
+  const letter = String.fromCharCode(97 + index);
 
   return (
     <div
@@ -18,7 +20,7 @@ const Option = ({ option, selectOption, answer, hide }) => {
         ${hide ? "hide" : ""}
         `}
     >
-      <p>{option}</p>
+      <p>{letter}) {option}</p>
     </div>
   );
 };

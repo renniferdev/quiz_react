@@ -2,32 +2,32 @@ const data = [
   {
     question: "O que é Vanilla JavaScript?",
     options: [
-      "JavaScript puro",
-      "Uma biblioteca JavaScript",
-      "Um framework JavaScript",
-      "Um compilador de JavaScript",
+      "a) JavaScript puro",
+      "b) Uma biblioteca JavaScript",
+      "c) Um framework JavaScript",
+      "d) Um compilador de JavaScript",
     ],
     answer: "JavaScript puro",
   },
   {
     question: "Com qual instrução declaramos uma constante em JavaScript?",
-    options: ["const", "let", "var", "define"],
+    options: ["a) const", "b) let", "c) var", "d) define"],
     answer: "const",
   },
   {
     question: "Qual dos tipos de dado a seguir não existe em JavaScript?",
-    options: ["string", "number", "boolean", "float"],
+    options: ["a) string", "b) number", "c) boolean", "d) float"],
     answer: "float",
   },
   {
     question: "Qual dos métodos a seguir seleciona um elemento?",
-    options: ["querySelector", "parseInt", "sort", "reduce"],
+    options: ["a) querySelector", "b) parseInt", "c) sort", "d) reduce"],
     answer: "querySelector",
   },
   {
     question:
       "Qual destas propriedades da a quantidade de elementos de um array?",
-    options: ["qty", "length", "items", "index"],
+    options: ["a) qty", "b) length", "c) items", "d) index"],
     answer: "length",
   },
 ];
