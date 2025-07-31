@@ -20,3 +20,20 @@
 #category button {
   margin: 1rem;
 }
+
+/* Responsividade */
+@media (max-width: 600px) {
+  #category {
+    max-width: 90%;
+  }
+
+  #category button {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  #category img {
+    max-width: 200px;
+  }
+}

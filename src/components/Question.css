@@ -17,3 +17,20 @@
   border: 2px solid #fff;
   margin: 1rem;
 }
+
+/* Responsividade */
+@media (max-width: 600px) {
+  #question {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  #question h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  #question button {
+    margin: 0.5rem;
+  }
+}

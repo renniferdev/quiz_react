@@ -10,3 +10,15 @@
 .App h1 {
   margin-bottom: 2rem;
 }
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .App {
+    padding-top: 1rem;
+  }
+
+  .App h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+}

@@ -29,3 +29,11 @@
 .hide {
   display: none;
 }
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .option {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
